@@ -10,5 +10,6 @@ import scrapy
 
 class FluidTopicsItem(scrapy.Item):
 	title = scrapy.Field()
+	# dropdown = scrapy.Field()
 	link = scrapy.Field()
 	metadata = scrapy.Field()

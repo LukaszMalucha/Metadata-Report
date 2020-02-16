@@ -19,7 +19,7 @@
 2017-01-01_2017-12-31 	1291
 2018-01-01_2018-12-31	6503
 
-
+#########################################
 2019-01-01_2019-01-31	1310
 2019-02-01_2019-02-31	260
 2019-03-01_2019-03-31	3755
@@ -31,6 +31,7 @@
 2019-09-01_2019-09-31	2015
 2019-10-01_2019-10-31	5614
 2019-11-01_2019-11-31	2095
+2019-12-01_2019-12-31	3843
 
 ???? Connecting a service laptop 
 Dropdown menu check if present then scroll through options and scrape each or just count selects
@@ -39,6 +40,8 @@ Dropdown menu check if present then scroll through options and scrape each or ju
 
 
 FUTURE ERRATIC DATES   2
+
+
 
 
 ISSUE WITH SEARCH INDEXING:
@@ -51,10 +54,11 @@ While:
 			  
 Which gives sum 235	
 
-Conclusion: Duplicate created_at entries	
+Conclusion: Duplicate created_at entries
 
 
 
- 
+https://johnsoncontrols.fluidtopics.net/search/all?query=North+American+Emissions+Compliance&period=custom_2018-01-01_2018-12-31&sort=last_update&content-lang=en-US	
 
-   
+
+NIE TRZEBA SCRAPOWAĆ DROPDOWN BO WYNIKI POJAWIAJĄ SIĘ ZALEŻNIE OD DATY
