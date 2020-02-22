@@ -1,0 +1,304 @@
+/*----------------------------------------------
+    COMMON  STYLES
+------------------------------------------------*/
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+
+
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.img-header {
+    margin-top: 15%;
+}
+
+#page-index {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    top: 56px;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: #4267b2
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.overflow_hidden {
+    overflow: hidden !important;
+}
+
+.transparent {
+    background: transparent;
+}
+
+.plain-element {
+  margin: 0px !important;
+  padding: 0px !important;
+
+}
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+    ROW HEADER
+------------------------------------------------------------------------------*/
+
+.header {
+    width: 100%;
+    margin: auto;
+    background: transparent;
+    text-align: center;
+}
+
+.top-menu {
+    height: 90px;
+    max-height: 90px;
+    width: 94%;
+    margin: auto;
+    padding: 0px;
+    color: #333333 !important;
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+}
+
+.top-menu h5 {
+    font-size: 30px;
+    margin: 30px 10px;
+
+}
+
+.top-menu button {
+    font-size: 18px;
+    color: #292929;
+    text-shadow: 1px 1px #e5e5e5;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding-left: 12px;
+    padding-right: 0px;
+}
+
+.top-menu button:hover {
+    color: #205592;
+    text-shadow: 1px 1px #d1ddf0;
+}
+
+.col-link {
+    padding: 3px 0px 0px 0px;
+}
+
+.companies-logo  {
+    height: 90px;
+    float: left;
+}
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS
+------------------------------------------------------------------------------*/
+
+
+.dashboard-cards {
+    border: none;
+    text-align: center;
+    box-shadow: none;
+    width: 72%;
+    margin: auto;
+    padding-bottom: 50px;
+    min-height: 700px;
+    display: block;
+    overflow: auto;
+}
+
+.row-break {
+    height: 40px;
+}
+
+.row-cards {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*----------------------------------------------
+    MENU CARD
+------------------------------------------------*/
+
+.menu-card {
+    box-shadow: 1px 1px 2px 2px #A9A9A9;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    float: none;
+    border-radius: 5px;
+
+}
+
+.menu-card:hover {
+    box-shadow: 0 3px 3px 0 #205592, 0 3px 2px -2px #205592, 0 2px 5px 0 #205592;
+}
+
+
+.menu-card .card-image {
+
+}
+
+
+.btn-enter {
+    background-color: #205592;
+    height: 72px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: none;
+    border:none;
+    color: #fff;
+    white-space: normal;
+    display: inline-block;
+}
+
+
+
+.btn-enter:hover,
+.btn-enter:focus,
+.btn-enter:active {
+    background-color: #205592;
+    color: white;
+}
+
+
+
+.btn-transaction {
+  background: #205592;
+  color: white;
+  font-size: 12px;
+  border: 1px solid #205592;
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 0px -10px !important;
+  line-height: 1.3;
+  padding: .25rem!important;
+  min-width: 5rem;
+  height: 28px;
+}
+
+.btn-transaction-small {
+  min-width: 4rem;
+
+}
+
+
+.btn-transaction:hover,
+.btn-transaction:active,
+.btn-transaction:focus {
+  background: #702a65;
+  border: 1px solid #702a65;
+  color: #fefefe;
+  transition: background-color .25s ease-out,color .25s ease-out
+}
+
+/*----------------------------------------------
+    SEARCHBOX
+------------------------------------------------*/
+
+.row-search {
+    margin: 40px 0px;
+
+}
+
+#searchbox {
+    box-shadow: 0 1px rgba(188,188,183,0.30);
+    border: 1px solid rgba(188,188,183,0.50);
+    border-radius: 8px;
+    width: 94%;
+    margin: auto;
+    padding: 4px 8px;
+    font-size: 18px;
+}
+
+
+/*------------------------------------------------------------------------------
+    TABLES
+------------------------------------------------------------------------------*/
+
+.search-wrapper {
+  width: 80%;
+  margin-left:20%;
+  margin-bottom: 0px;
+  text-align: right;
+
+}
+.search-wrapper label {
+  margin: 0px;
+}
+
+tr {
+border-bottom: none
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+  border-top: 0px solid;
+}
+
+.table-transaction {
+  font-size: 16px;
+}
+
+.table-transaction > tbody > tr > td {
+  padding: 10px;
+}
+
+.cell-input {
+  padding: 0px !important;
+}
+
+
+.cash-cell {
+  padding-left: 6px !important;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Coding Portfolio</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Materialize-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- FontAwesome Styles-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <!-- Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- style CSS -->
+  <link rel="stylesheet" href="resources/css/custom-styles.css">
+  <link href="resources/css/navbar.css" rel="stylesheet"/>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138397523-10"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-138397523-10');
+  </script>
+
+
+</head>
+<body>
+<div id="wrapper">
+  <nav class="navbar navbar-default top-navbar" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand waves-effect waves-dark" href="index.html">
+        <img src="resources/img/lukasz.jpg" alt="portrait" class="img-portrait"/>
+      </a>
+      <b>Coding Portfolio</b>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+      <li><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/lukaszmalucha"><i class="fab fa-linkedin-in"></i><b>LinkedIn</b></a>
+      </li>
+      <li><a class="nav-link" target="_blank"
+             href="https://github.com/LukaszMalucha"><i class="fab fa-github"></i>
+        <b>GitHub</b></a></li>
+      <li><a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="trigger">menu</i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="dropdown-button waves-effect waves-dark" href="https://www.linkedin.com/in/lukaszmalucha"><i
+            class="fas fa-terminal"></i><b>LinkedIn</b></a></li>
+    <li><a class="dropdown-button waves-effect waves-dark" target="_blank"
+           href="https://github.com/LukaszMalucha"><i class="fab fa-github"></i>
+      <b>GitHub</b></a>
+    </li>
+  </ul>
+
+  <div id="page-index">
+
+    <div id="app">
+      <div class="row header">
+        <div class="row top-menu">
+          <div class="col-xs-2 col-sm-2 col-md-2 plain-element text-left">
+            <a href="index.html"><img src="resources/img/project-logo.jpg" alt="python" class="projects-logo"/></a>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-link">
+            <button  @click="dataDjango">Django Applications</button>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-link">
+            <button @click="dataFlask">Flask Applications</button>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-link">
+            <button @click="dataAI">Artificial Intelligence</button>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-link">
+            <button @click="dataAnalysis">Data Analysis</button>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-link">
+            <button @click="dataTableau">Tableau Dashboards</button>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard-cards">
+        <project v-for="project in projects" :project="project">
+
+        </project>
+
+      </div>
+    </div>
+  </div>
+  <!-- PAGE-INDEX -->
+</div>
+<!-- /. WRAPPER  -->
+<div class="footer">
+  <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+    Policy</a> • © 2019 - 2020 www.septellar.com - All Rights Reserved • Powered by Septellar&trade;</p>
+</div>
+
+<!-- Bootstrap Js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+<script type="module" src="resources/js/main.js"></script>
+
+</body>
+</html>

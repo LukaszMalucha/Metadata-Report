@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Knowledge Exchange</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="resources/css/custom-styles.css">
+    <link href="resources/css/navbar.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand waves-effect waves-dark" href="index.html">
+                <img src="https://techcommft.blob.core.windows.net/fluidtopics/jci_logo-default.svg" alt="JC Logo"
+                     class="img-logo"/>
+            </a><b>Knowledge Exchange</b>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li><a class="nav-link" target="_blank" href=""><i class="fas fa-pencil-alt"></i><b>Sign Up</b></a>
+            </li>
+            <li><a class="nav-link" target="_blank" href=""><i class="fas fa-sign-in-alt"></i>
+                <b>Log In</b></a></li>
+            <li><a class="nav-link" target="_blank" href=""><i class="fas fa-object-group"></i>
+                <b>English</b></a></li>
+            <li><a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="trigger">menu</i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- MOBILE -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a class="dropdown-button waves-effect waves-dark" href=""><i
+                class="fas fa-terminal"></i><b>Link</b></a></li>
+        <li><a class="dropdown-button waves-effect waves-dark" target="_blank"
+               href=""><i class="fab fa-github"></i>
+            <b>Link2</b></a>
+        </li>
+    </ul>
+    <div id="page-index">
+
+        <div class="dashboard-cards">
+            <div class="row row-search">
+                <input class="form-control" id="searchbox" type="text" placeholder="Search for Document"
+                       aria-label="Search for Document">
+            </div>
+            <div class="row header">
+                <div class="row top-menu">
+                    <div class="col-xs-2 col-sm-2 col-md-2 plain-element text-left">
+                        <a href="index.html"><img src="resources/img/metasys_logo.png" alt="company logo"
+                                                  class="companies-logo"/></a>
+                    </div>
+                    <div class="col-xs-10 col-sm-10 col-md-10 plain-element text-left">
+                        <h5>BAS Documentation</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cards">
+                <table id="documentTable">
+                    <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Instrument</th>
+                        <th onclick="sortTable(1)" class="text-center">Symbol</th>
+                        <th onclick="sortTable(2)" class="text-center">Category</th>
+                        <th class="text-center">Price (USD)</th>
+                        <th colspan="2" class="text-center">Transaction</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Tesla Inc</td>
+                        <td class="text-center">TSLA</td>
+                        <td class="text-center">Stock</td>
+                        <td class="text-center">329,94</td>
+                        <td class="text-center"><a href="/instrument/i-tesla-inc-12dfa/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-tesla-inc-12dfa/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Silver Spot</td>
+                        <td class="text-center">XAG</td>
+                        <td class="text-center">Commodity</td>
+                        <td class="text-center">16,99</td>
+                        <td class="text-center"><a href="/instrument/i-silver-spot-4dtw1/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-silver-spot-4dtw1/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Gold Spot</td>
+                        <td class="text-center">XAU</td>
+                        <td class="text-center">Commodity</td>
+                        <td class="text-center">1.462,15</td>
+                        <td class="text-center"><a href="/instrument/i-gold-spot-fk13s/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-gold-spot-fk13s/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Euro</td>
+                        <td class="text-center">EUR</td>
+                        <td class="text-center">Currency</td>
+                        <td class="text-center">1,12</td>
+                        <td class="text-center"><a href="/instrument/i-euro-744zxr/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-euro-744zxr/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Ethereum</td>
+                        <td class="text-center">ETH</td>
+                        <td class="text-center">Cryptocurrency</td>
+                        <td class="text-center">150,03</td>
+                        <td class="text-center"><a href="/instrument/i-ethereum-we4rtga/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-ethereum-we4rtga/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Brent</td>
+                        <td class="text-center">BRT</td>
+                        <td class="text-center">Commodity</td>
+                        <td class="text-center">63,59</td>
+                        <td class="text-center"><a href="/instrument/i-brent-hg32a/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-brent-hg32a/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Bitcoin</td>
+                        <td class="text-center">BTC</td>
+                        <td class="text-center">Cryptocurrency</td>
+                        <td class="text-center">8.068,32</td>
+                        <td class="text-center"><a href="/instrument/i-bitcoin-azr2we/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-bitcoin-azr2we/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Apple Inc.</td>
+                        <td class="text-center">AAPL</td>
+                        <td class="text-center">Stock</td>
+                        <td class="text-center">261,78</td>
+                        <td class="text-center"><a href="/instrument/i-alphabet-inc-nws44a/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-alphabet-inc-nws44a/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Amazon.com Inc.</td>
+                        <td class="text-center">AMZN</td>
+                        <td class="text-center">Stock</td>
+                        <td class="text-center">1.745,72</td>
+                        <td class="text-center"><a href="/instrument/i-amazon-com-inc-nza41/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-amazon-com-inc-nza41/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    <tr>
+                        <td>Alphabet Inc.</td>
+                        <td class="text-center">GOOGL</td>
+                        <td class="text-center">Stock</td>
+                        <td class="text-center">1.293,67</td>
+                        <td class="text-center"><a href="/instrument/i-alphabet-inc-nw419d/buy" class="">
+                            <button class="btn btn-transaction">Buy</button>
+                        </a></td>
+                        <td class="text-center"><a href="/instrument/i-alphabet-inc-nw419d/sell" class="">
+                            <button class="btn btn-transaction">Sell</button>
+                        </a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
