@@ -23,12 +23,12 @@ def merge_and_date(CSV_FILES):
     
     for file in CSV_FILES:
         dataset = pd.read_csv(file + ".csv", encoding='utf-8-sig')
-#        dataset['created_at'] = file[11:]
         datasets.append(dataset)
         
-    merged_dataset = pd.concat(datasets) 
+    merged_dataset = pd.concat(datasets)
+    merged_dataset.drop_duplicates()
     merged_dataset.to_csv("documents.csv",  encoding='utf-8-sig', index=False)       
-        
+    return merged_dataset    
     
     
-merge_and_date(CSV_FILES)    
+data = merge_and_date(CSV_FILES)    

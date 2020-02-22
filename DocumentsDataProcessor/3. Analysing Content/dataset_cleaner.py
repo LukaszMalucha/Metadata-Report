@@ -6,6 +6,30 @@ Created on Fri Feb 21 08:18:52 2020
 """
 
 
+import pandas as pd
+
+
+# COLUMN CLEANERS ARE SEPRATED TO FILES
+from column_cleaners.column_remover import column_remover
+from column_cleaners.meta_various_cleaner import meta_various_cleaner
+
+from column_cleaners.title_cleaner import title_cleaner
+from column_cleaners.date_cleaner import date_cleaner
+from column_cleaners.document_number_cleaner import document_number_cleaner
+from column_cleaners.series_splitter import series_splitter
+from column_cleaners.brand_splitter import brand_splitter
+from column_cleaners.part_number_cleaner import part_number_cleaner
+from column_cleaners.category_cleaner import category_cleaner
+from column_cleaners.document_revision_cleaner import document_revision_cleaner
+from column_cleaners.version_cleaner import version_cleaner
+from column_cleaners.business_cleaner import business_cleaner
+from column_cleaners.document_type_cleaner import document_type_cleaner
+from column_cleaners.product_cleaner import product_cleaner
+from column_cleaners.product_code_splitter import product_code_splitter
+from column_cleaners.duplicate_columns_cleaner import duplicate_columns_cleaner
+
+
+
 column_order = [
             "topic_title",
             "document_title",
@@ -39,30 +63,6 @@ column_order = [
             "meta_originId",
             "meta_vrm_version" ,       
             ]
-
-import pandas as pd
-
-
-# COLUMN CLEANERS ARE SEPRATED TO FILES
-from column_remover import column_remover
-from meta_various_cleaner import meta_various_cleaner
-
-from title_cleaner import title_cleaner
-from date_cleaner import date_cleaner
-from document_number_cleaner import document_number_cleaner
-from series_splitter import series_splitter
-from brand_splitter import brand_splitter
-from part_number_cleaner import part_number_cleaner
-from category_cleaner import category_cleaner
-from document_revision_cleaner import document_revision_cleaner
-from version_cleaner import version_cleaner
-from business_cleaner import business_cleaner
-from document_type_cleaner import document_type_cleaner
-from product_cleaner import product_cleaner
-from product_code_splitter import product_code_splitter
-from duplicate_columns_cleaner import duplicate_columns_cleaner
-
-
 
 def dataset_cleaner(filename):
     """
