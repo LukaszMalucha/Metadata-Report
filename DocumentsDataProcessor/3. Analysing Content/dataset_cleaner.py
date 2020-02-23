@@ -142,7 +142,7 @@ data = dataset_cleaner("documents_processed.csv")
 
 
 
-
+dataset = pd.read_csv("documents_processed.csv", encoding='utf-8-sig')
 
 
 
