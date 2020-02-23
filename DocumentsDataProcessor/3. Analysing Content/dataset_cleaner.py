@@ -27,6 +27,7 @@ from column_cleaners.document_type_cleaner import document_type_cleaner
 from column_cleaners.product_cleaner import product_cleaner
 from column_cleaners.product_code_splitter import product_code_splitter
 from column_cleaners.duplicate_columns_cleaner import duplicate_columns_cleaner
+from column_cleaners.brand_series_matcher import brand_series_matcher
 
 
 
@@ -112,10 +113,17 @@ def dataset_cleaner(filename):
 #   Series - HEAVY COMPUTATION
     dataset = series_splitter(dataset)    
             
-#   Product - HEAVY COMPUTATION
+#   Product
     dataset = product_cleaner(dataset)
     
+#   Brand vs Series Matcher
+    dataset = brand_series_matcher(dataset)    
+           
+#   Order Columns    
     dataset = dataset.reindex(columns=column_order)
+    
+#   Drop duplicate rows if any    
+    dataset.drop_duplicates()
     
     
     ## SAVE AS JSON    
@@ -131,6 +139,31 @@ def dataset_cleaner(filename):
 
 
 data = dataset_cleaner("documents_processed.csv")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

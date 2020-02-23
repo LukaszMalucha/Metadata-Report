@@ -24,3 +24,5 @@ def business_cleaner(dataset):
     dataset = dataset.drop(['Business'], axis=1)
     
     return dataset
+
+

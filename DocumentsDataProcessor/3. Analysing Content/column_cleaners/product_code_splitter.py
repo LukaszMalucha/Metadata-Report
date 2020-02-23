@@ -5,7 +5,7 @@ Created on Wed Feb 19 18:03:08 2020
 @author: jmalucl
 """
 
-
+import pandas as pd
 
 
 """
@@ -443,6 +443,12 @@ def product_code_splitter(dataset):
     
     dataset['product_code']  = dataset['product_code'].apply(lambda x: z_series_splitter(x) if x == "ZM05 to ZM08" else x)
     dataset['product_code']  = dataset['product_code'].apply(lambda x: z_series_splitter(x) if x == "ZM10 to ZM12" else x)
+    
+#    dataset['product_name'] = dataset['product_name'].apply(lambda x: x.split(',')) 
+#    product_name_column = dataset.apply(lambda x: pd.Series(x['product_name']), axis=1).stack().reset_index(level=1, drop=True)
+#    product_name_column.name = 'product_name'
+#    dataset = dataset.drop('product_name', axis=1).join(product_name_column)
+#    dataset['product_name'] = pd.Series(dataset['product_name'], dtype=object)
     
     return dataset
     

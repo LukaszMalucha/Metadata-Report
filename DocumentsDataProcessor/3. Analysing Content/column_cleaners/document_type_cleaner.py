@@ -12,10 +12,10 @@ def document_type_cleaner(dataset):
     
     dataset['document_type'] = dataset['document_type'].fillna("Not Specified")  
     
-    dataset['document_type'] = dataset['document_type'].str.replace("sensors and Initiating Devices", "Sensors and Initiating Devices")
-    dataset['document_type'] = dataset['document_type'].str.replace(", and ", ",")
-    dataset['document_type'] = dataset['document_type'].str.replace("/", ",")
-    
+    dataset['document_type'] = dataset['document_type'].str.replace("other choices available", "")
+    dataset['document_type'] = dataset['document_type'].str.replace("(", "")
+    dataset['document_type'] = dataset['document_type'].str.replace(")", "")
+    dataset['document_type'] = dataset['document_type'].str.strip()
 
     
     return dataset

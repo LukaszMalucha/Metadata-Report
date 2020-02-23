@@ -29,19 +29,23 @@ def series_splitter(dataset):
     dataset['Series'] = dataset['Series'].str.replace("Wireless Device Manager BIM / Wireless Module BIX", "Wireless Device Manager BIM, Wireless Module BIX")
     dataset['Series'] = dataset['Series'].str.replace(" and", ",")
     dataset['Series'] = dataset['Series'].str.replace(" Series", "")
+    dataset['Series'] = dataset['Series'].str.replace("-Series", "")
     dataset['Series'] = dataset['Series'].str.replace("Series ", "")
+    dataset['Series'] = dataset['Series'].str.replace("®", "")
+    dataset['Series'] = dataset['Series'].str.replace("™", "")
+    
     dataset['Series'] = dataset['Series'].apply(lambda x: x.split(',')) 
 
     
-    # SPLIT LISTED COMPANIES INTO SEPARATE ROWS
+#   SPLIT LISTED SERIES INTO SEPARATE ROWS
     series_column = dataset.apply(lambda x: pd.Series(x['Series']), axis=1).stack().reset_index(level=1, drop=True)
     series_column.name = 'Series'
     dataset = dataset.drop('Series', axis=1).join(series_column)
     dataset['Series'] = pd.Series(dataset['Series'], dtype=object)
     
-    # REMOVE WHITESPACES
+#   REMOVE WHITESPACES
     dataset['Series'] = dataset['Series'].str.strip()
-    dataset['Series'] = dataset['Series'].str.replace("-Series", "")
+    
     
 #   REMOVE (OTHER CHOICES AVAILABLE)
     dataset['Series'] = dataset['Series'].str.replace("other choices available", "")
